@@ -3,9 +3,9 @@ $this->load->view('template/header');
 $this->load->view('template/menu');
 ?>
           
-<div class="container" style="margin-top: 110px; margin-bottom: 90px;">
+<div class="container" style="margin-top: 110px; margin-bottom: 80px;">
     <div class="row">
-        <div class="col-md-6 mx-auto col-md-offset-3">
+        <div class="col-md-4 mx-auto col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Login</h3>
@@ -30,7 +30,8 @@ $this->load->view('template/menu');
                     <hr/>
                     <center><h4>OR</h4></center>
                     <input class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via facebook">
-                </div>
+                </div><br>
+                <h5 class="">Novo por aqui? <a href="<?= site_url("auth/create") ?>">Cadastre-se</a></h5><br>
             </div>
         </div></div>
     </div>
