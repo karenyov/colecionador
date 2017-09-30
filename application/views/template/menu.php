@@ -15,7 +15,7 @@ function active($item, $uri) {
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="<?= site_url("auth") ?>">Login</a>
+                    <a class="nav-link js-scroll-trigger" href="<?= site_url("login") ?>">Login</a>
                 </li>
             </ul>
         </div>
