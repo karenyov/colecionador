@@ -3,6 +3,12 @@ $this->load->view('template/header');
 $this->load->view('template/menu');
 ?>
 
+<style>
+    .error-msg {
+        color: #d9534f;
+        border-color: #d9534f;
+    }
+</style>
 <div class="container" style="margin-top: 110px; margin-bottom: 80px;">
     <div class="row">
         <div class="col-md-10">
@@ -11,47 +17,55 @@ $this->load->view('template/menu');
                     <h3 class="panel-title">Cadastro</h3>
                 </div>
                 <div class="panel-body">
-                    <?php if (validation_errors()): ?>
-                        <div class="alert alert-danger col-sm-8 col-md-8" role="alert" style="font-size: 5px;">
-                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span class="sr-only">Error:</span>
-                            <?= validation_errors(); ?>
-                        </div>
-                    <?php endif ?>
                     <?= form_open('login/create_user'); ?>
                     <div class="row">
                         <div class="col-sm-4 col-md-4">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Nome" name="name" type="text">
+                                <input class="form-control" placeholder="Nome" name="name" type="text" value="<?= set_value('name') ?>" required>
+                                <div class="error-msg">
+                                    <?php echo form_error('name') ? '<hr class="error-msg">' . form_error('name') : ''; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Sobrenome" name="last_name" type="text">
+                                <input class="form-control" placeholder="Sobrenome" name="last_name" value="<?= set_value('last_name') ?>" type="text" required>
+                                <div class="error-msg">
+                                    <?php echo form_error('last_name') ? '<hr class="error-msg">' . form_error('last_name') : ''; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="username" name="username" class="form-control" placeholder="Username">
+                                <input type="username" name="username" class="form-control" placeholder="Username" value="<?= set_value('username') ?>" required>
+                                <div class="error-msg">
+                                    <?php echo form_error('username') ? '<hr class="error-msg">' . form_error('username') : ''; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Email Address">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address" value="<?= set_value('email') ?>" required>
+                                <div class="error-msg">
+                                    <?php echo form_error('email') ? '<hr class="error-msg">' . form_error('email') : ''; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 col-md-4">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Senha" name="passwd" type="password">
+                                <input class="form-control" placeholder="Senha" name="passwd" type="password" required="true">
+                                <div class="error-msg">
+                                    <?php echo form_error('passwd') ? '<hr class="error-msg">' . form_error('passwd') : ''; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Confirme a senha" name="confirm_password" type="password">
+                                <input class="form-control" placeholder="Confirme a senha" name="confirm_password" type="password" required="true">
                             </div>
                         </div>
                     </div>
