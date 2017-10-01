@@ -11,7 +11,7 @@ $this->load->view('template/menu');
 </style>
 <div class="container" style="margin-top: 110px; margin-bottom: 80px;">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Cadastro</h3>
@@ -69,14 +69,25 @@ $this->load->view('template/menu');
                             </div>
                         </div>
                     </div>
-
                     <input class="btn btn-lg btn-success" type="submit" value="Enviar">
                     </form>
                 </div><br>
             </div>
         </div>
-        <div class="col-md-2">
-            teste
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Colecionador</h3>
+                </div>
+                <p class="lead">Registre agora totalmente <span class="text-success">GRATUITO</span></p>
+                <ul class="list-unstyled" style="line-height: 2">
+                    <li><span class="fa fa-check text-success"></span> Compartilhe seus itens</li>
+                    <li><span class="fa fa-check text-success"></span> Venda, troque ou compre itens colecionáveis</li>
+                    <li><span class="fa fa-check text-success"></span> Salve os favoritos</li>
+                    <li><span class="fa fa-check text-success"></span> Veja os itens de outros colecionadores</li>
+                    <li><a href="/read-more/"><u>Read more</u></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
